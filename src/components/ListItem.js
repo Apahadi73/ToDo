@@ -37,7 +37,7 @@ const ListItem = (props) => {
 	};
 
 	return (
-		<div className="list-group-item" style={{ backgroundColor: '#ecf0f1' }}>
+		<div className="list-group-item" style={{ backgroundColor: '#83c5be' }}>
 			{item}
 			<span className="float-right">
 				{onStarPainted()}
