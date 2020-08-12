@@ -1,0 +1,20 @@
+.card {
+  width: 70%;
+  background-color: #318fb5;
+  justify-content: center;
+  padding: 0;
+  box-shadow: 5px 10px 18px #2F8BAF;
+}
+
+.card-body {
+  justify-content: center !important;
+  padding: 0.75rem;
+}
+
+h1 {
+  color: white;
+}
+
+.appBody {
+  margin: 2rem;
+}
