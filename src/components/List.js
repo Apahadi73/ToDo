@@ -1,29 +1,29 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { fetchToDoList } from '../actions/index';
-import ListItem from './ListItem';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { fetchToDoList } from "../actions/index";
+import ListItem from "./ListItem";
 
 //List Component
 class List extends Component {
-	// maps list prop into the individual jsx element
-	activityList = () => {
-		const { list } = this.props;
-		if (list === null) {
-			return <div />;
-		} else {
-			return list.map((item, index) => {
-				return <ListItem id={item._id} item={item.todo} key={item._id} />;
-			});
-		}
-	};
+  // maps list prop into the individual jsx element
+  activityList = () => {
+    const { list } = this.props;
+    if (list === null) {
+      return <div />;
+    } else {
+      return list.map((item, index) => {
+        return <ListItem id={item._id} item={item.todo} key={item._id} />;
+      });
+    }
+  };
 
-	render() {
-		return <ul className="card">{this.activityList()}</ul>;
-	}
+  render() {
+    return <ul className="card">{this.activityList()}</ul>;
+  }
 }
 
 const mapStatesToProps = ({ ToDoList }) => {
-	return { list: ToDoList };
+  return { list: ToDoList };
 };
 
 export default connect(mapStatesToProps, { fetchToDoList })(List);
